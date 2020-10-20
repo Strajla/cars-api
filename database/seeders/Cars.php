@@ -2,17 +2,18 @@
 
 namespace Database\Seeders;
 
+use App\Models\Car;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class Cars extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        \App\Models\Car::factory(10)->create();
+        Car::factory()->times(20)->create();
     }
 }
